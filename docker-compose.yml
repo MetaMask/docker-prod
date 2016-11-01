@@ -1,0 +1,12 @@
+redirector:
+  build: redirector/
+  restart: always
+  ports:
+    - "9000"
+  environment:
+    PORT: 9000
+    REDIRECT_TARGET: "https://medium.com/metamask"
+    VIRTUAL_PORT: "9000"
+    VIRTUAL_HOST: "blog.metamask.io"
+    LETSENCRYPT_HOST: "admin.metamask.io"
+    LETSENCRYPT_EMAIL: "admin@metamask.io"
