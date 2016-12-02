@@ -8,5 +8,5 @@ redirector:
     REDIRECT_TARGET: "https://medium.com/metamask"
     VIRTUAL_PORT: "9000"
     VIRTUAL_HOST: "blog.metamask.io"
-    LETSENCRYPT_HOST: "admin.metamask.io"
+    LETSENCRYPT_HOST: "blog.metamask.io"
     LETSENCRYPT_EMAIL: "admin@metamask.io"
