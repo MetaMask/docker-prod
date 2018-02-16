@@ -1,4 +1,17 @@
-redirector:
+www-redirector:
+  build: redirector/
+  restart: always
+  ports:
+    - "9000"
+  environment:
+    PORT: 9000
+    REDIRECT_TARGET: "https://metamask.io"
+    VIRTUAL_PORT: "9000"
+    VIRTUAL_HOST: "www.metamask.io"
+    LETSENCRYPT_HOST: "www.metamask.io"
+    LETSENCRYPT_EMAIL: "admin@metamask.io"
+
+blog-redirector:
   build: redirector/
   restart: always
   ports:
@@ -9,4 +22,17 @@ redirector:
     VIRTUAL_PORT: "9000"
     VIRTUAL_HOST: "blog.metamask.io"
     LETSENCRYPT_HOST: "blog.metamask.io"
+    LETSENCRYPT_EMAIL: "admin@metamask.io"
+
+support-redirector:
+  build: redirector/
+  restart: always
+  ports:
+    - "9000"
+  environment:
+    PORT: 9000
+    REDIRECT_TARGET: "https://metamask.helpscoutdocs.com"
+    VIRTUAL_PORT: "9000"
+    VIRTUAL_HOST: "support.metamask.io"
+    LETSENCRYPT_HOST: "support.metamask.io"
     LETSENCRYPT_EMAIL: "admin@metamask.io"
