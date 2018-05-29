@@ -54,7 +54,7 @@ support-redirector:
     - "9000"
   environment:
     PORT: 9000
-    REDIRECT_TARGET: "https://metamask.helpscoutdocs.com"
+    REDIRECT_TARGET: "https://consensys.zendesk.com/hc/en-us/categories/360000441452-Using-MetaMask"
     VIRTUAL_PORT: "9000"
     VIRTUAL_HOST: "support.metamask.io"
     LETSENCRYPT_HOST: "support.metamask.io"
