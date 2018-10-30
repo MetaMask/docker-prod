@@ -59,3 +59,16 @@ support-redirector:
     VIRTUAL_HOST: "support.metamask.io"
     LETSENCRYPT_HOST: "support.metamask.io"
     LETSENCRYPT_EMAIL: "admin@metamask.io"
+
+swag-redirector:
+  build: redirector/
+  restart: always
+  ports:
+    - "9000"
+  environment:
+    PORT: 9000
+    REDIRECT_TARGET: "https://shop.spreadshirt.com/metamask"
+    VIRTUAL_PORT: "9000"
+    VIRTUAL_HOST: "swag.metamask.io"
+    LETSENCRYPT_HOST: "swag.metamask.io"
+    LETSENCRYPT_EMAIL: "admin@metamask.io"
