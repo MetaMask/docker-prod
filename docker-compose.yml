@@ -21,7 +21,7 @@ letsencrypt-nginx-proxy-companion:
     - "/var/run/docker.sock:/var/run/docker.sock:ro"
     - "../../../volumes/proxy/certs:/etc/nginx/certs:rw"
 
-www-redirector:
+mobile-redirector:
   build: redirector/
   restart: always
   ports:
@@ -30,45 +30,6 @@ www-redirector:
     PORT: 9000
     REDIRECT_TARGET: "https://metamask.io"
     VIRTUAL_PORT: "9000"
-    VIRTUAL_HOST: "www.metamask.io"
-    LETSENCRYPT_HOST: "www.metamask.io"
-    LETSENCRYPT_EMAIL: "admin@metamask.io"
-
-blog-redirector:
-  build: redirector/
-  restart: always
-  ports:
-    - "9000"
-  environment:
-    PORT: 9000
-    REDIRECT_TARGET: "https://medium.com/metamask"
-    VIRTUAL_PORT: "9000"
-    VIRTUAL_HOST: "blog.metamask.io"
-    LETSENCRYPT_HOST: "blog.metamask.io"
-    LETSENCRYPT_EMAIL: "admin@metamask.io"
-
-support-redirector:
-  build: redirector/
-  restart: always
-  ports:
-    - "9000"
-  environment:
-    PORT: 9000
-    REDIRECT_TARGET: "https://metamask.zendesk.com/hc/en-us"
-    VIRTUAL_PORT: "9000"
-    VIRTUAL_HOST: "support.metamask.io"
-    LETSENCRYPT_HOST: "support.metamask.io"
-    LETSENCRYPT_EMAIL: "admin@metamask.io"
-
-swag-redirector:
-  build: redirector/
-  restart: always
-  ports:
-    - "9000"
-  environment:
-    PORT: 9000
-    REDIRECT_TARGET: "https://shop.spreadshirt.com/metamask"
-    VIRTUAL_PORT: "9000"
-    VIRTUAL_HOST: "swag.metamask.io"
-    LETSENCRYPT_HOST: "swag.metamask.io"
+    VIRTUAL_HOST: "mobile.metamask.io"
+    LETSENCRYPT_HOST: "mobile.metamask.io"
     LETSENCRYPT_EMAIL: "admin@metamask.io"
