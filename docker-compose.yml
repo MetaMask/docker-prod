@@ -33,16 +33,3 @@ mobile-redirector:
     VIRTUAL_HOST: "mobile.metamask.io"
     LETSENCRYPT_HOST: "mobile.metamask.io"
     LETSENCRYPT_EMAIL: "admin@metamask.io"
-
-mobile-redirector:
-  build: redirector/
-  restart: always
-  ports:
-    - "9000"
-  environment:
-    PORT: 9000
-    REDIRECT_TARGET: "https://laughing-booth-d71559.netlify.com"
-    VIRTUAL_PORT: "9000"
-    VIRTUAL_HOST: "mobile.metamask.io"
-    LETSENCRYPT_HOST: "mobile.metamask.io"
-    LETSENCRYPT_EMAIL: "admin@metamask.io"
